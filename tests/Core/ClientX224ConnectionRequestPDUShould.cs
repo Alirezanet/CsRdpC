@@ -1,4 +1,7 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 
 namespace CsRdpC.Core.Tests {
@@ -34,6 +37,9 @@ namespace CsRdpC.Core.Tests {
       public void GetX244Crq_Should () {
          var x = client.GetX244Crq ();
          Assert.Equal (7, x.Length);
+         Assert.Equal(254,x[0]); // LI 13.2.1 of X244
+         Assert.Equal(224,x[1]); // CRCDT 13.3.3 of X244
+         Assert.Equal(Enumerable.Repeat<byte>(0,5), x[2..]); // CRCDT 13.3.3 of X244
       }
 
    }
