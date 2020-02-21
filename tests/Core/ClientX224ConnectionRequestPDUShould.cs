@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace SharpRdp.Core.Tests {
+namespace CsRdpC.Core.Tests {
    public class ClientX224ConnectionRequestPDUShould {
       public ClientX224ConnectionRequestPDU client { get; set; }
       public ClientX224ConnectionRequestPDUShould () {

@@ -1,6 +1,6 @@
 using System;
 
-namespace SharpRdp.Core {
+namespace CsRdpC.Core {
    public class ClientX224ConnectionRequestPDU {
       /// <summary>
       /// A TPKT consists of two parts: a packet header, followed by a TPDU. The format of the packet
